@@ -17,6 +17,37 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <style>
+    #dcsPop{
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: dcsPop 0.6s cubic-bezier(.34,1.56,.64,1) both;
+    }
+    #text1198{
+      transform-box: fill-box;
+      animation: elecSlide 0.5s ease-out 0.6s both;
+    }
+    #path826, #path826-2, #path826-7{
+      opacity: 0;
+      animation: waveIn 0.35s ease-out forwards;
+    }
+    #path826-7{ animation-delay: 1.1s; }
+    #path826-2{ animation-delay: 1.25s; }
+    #path826{ animation-delay: 1.4s; }
+    @keyframes dcsPop{
+      0%{ transform: scale(0.3); opacity: 0; }
+      60%{ transform: scale(1.08); opacity: 1; }
+      100%{ transform: scale(1); opacity: 1; }
+    }
+    @keyframes elecSlide{
+      0%{ transform: translateX(-30px); opacity: 0; }
+      100%{ transform: translateX(0); opacity: 1; }
+    }
+    @keyframes waveIn{
+      0%{ opacity: 0; }
+      100%{ opacity: 1; }
+    }
+  </style>
   <defs
      id="defs2">
     <linearGradient
@@ -302,6 +333,7 @@
        sodipodi:nodetypes="cc"
        inkscape:export-xdpi="148"
        inkscape:export-ydpi="148" />
+    <g id="dcsPop">
     <path
        style="opacity:1;fill:url(#linearGradient1318);fill-opacity:1;stroke:url(#linearGradient1376);stroke-width:0.965;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.955556"
        d="m 51.074031,36.243675 -1.748139,-2.551339 c 0,0 0.377976,-2.55134 0.566965,-2.55134 0.188986,0 21.733631,5.338915 21.733631,5.338915 l 6.521606,5.819183 -0.486048,4.236858 3.437718,0.816691 -5.512432,27.528762 -3.842914,-0.610474 -0.779698,3.512063 -3.498805,3.272387 -29.266014,0.06682 1.109623,-3.679119 2.078868,-1.13393 z"
@@ -341,6 +373,7 @@
        sodipodi:nodetypes="cccccccccccccccccccccccccccccc"
        inkscape:export-xdpi="148"
        inkscape:export-ydpi="148" />
+    </g>
     <text
        xml:space="preserve"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3151px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#fffdfd;stroke-width:1.21409;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"

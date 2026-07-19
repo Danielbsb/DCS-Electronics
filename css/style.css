@@ -11,7 +11,7 @@
   }
 
   *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
+  html{ scroll-behavior: smooth; scrollbar-gutter: stable both-edges; }
 
   body{
     margin:0;
@@ -418,7 +418,6 @@
     width: 100%;
     display: block;
     border-radius: 10px;
-    border: 1px solid var(--line);
   }
   .detail-body h1{
     font-size: 2rem;
@@ -510,6 +509,63 @@
     border-left: 2px solid var(--copper);
     padding-left: 14px;
   }
+  .about-link{
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--copper);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .about-link:hover{ text-decoration: underline; }
+
+  #page-sobre main .wrap{ max-width: 1000px; }
+  #page-sobre .about-grid{ gap: 24px; }
+  #page-sobre .about-grid > div:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+  }
+
+  #page-sobre .company-about{ gap: 60px; }
+  #page-sobre .company-about > div:first-child{
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+    max-width: 500px;
+  }
+  #page-sobre .company-about .eyebrow{ gap: 0; }
+  #page-sobre .company-about .eyebrow::before{ display: none; }
+  #page-sobre .company-about h2{
+    font-size: 1.9rem;
+    line-height: 1.15;
+  }
+
+  .history-photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+    width: 500px;
+    max-width: 100%;
+  }
+  .history-photo{
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .ceo-intro h2{ margin: 16px 0 0; font-size: 1.2rem; }
+  .ceo-photo{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
 
   /* ---------- CONTATO ---------- */
   .contact-box{
@@ -558,6 +614,7 @@
     .hero-inner{ grid-template-columns: 1fr; }
     .schematic-wrap{ order: -1; max-width: 240px; margin: 0 auto; }
     .about-grid{ grid-template-columns: 1fr; }
+    #page-sobre .about-grid > div:first-child{ margin-left: 0; }
     .contact-box{ grid-template-columns: 1fr; padding: 32px 24px; }
   }
 

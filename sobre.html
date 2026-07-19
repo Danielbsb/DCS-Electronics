@@ -3,34 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amplificador SUB100 — DCS Electronics</title>
-<link rel="icon" type="image/svg+xml" href="../assets/logo_aba.svg">
+<title>Sobre Nós — DCS Electronics</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo_aba.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="page-sobre">
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="../index.html#top" class="logo-mark">
-      <img src="../assets/logo_fundo_preto.svg" alt="DCS Electronics" class="logo-img">
+    <a href="index.html#top" class="logo-mark">
+      <img src="assets/logo_fundo_preto.svg" alt="DCS Electronics" class="logo-img">
     </a>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
     <nav class="main-nav" id="mainNav">
       <ul>
         <li class="has-dropdown">
-          <a href="../index.html#projetos">Projetos</a>
+          <a href="index.html#projetos">Projetos</a>
           <ul class="dropdown">
-            <li><a href="amplificador-gen30.html">Amplificador GEN30</a></li>
-            <li><a href="amplificador-sub100.html">Amplificador SUB100</a></li>
-            <li><a href="amplificador-sub75.html">Amplificador SUB75</a></li>
-            <li><a href="amplificador-sub350.html">Amplificador SUB350</a></li>
+            <li><a href="projetos/amplificador-gen30.html">Amplificador GEN30</a></li>
+            <li><a href="projetos/amplificador-sub100.html">Amplificador SUB100</a></li>
+            <li><a href="projetos/amplificador-sub75.html">Amplificador SUB75</a></li>
+            <li><a href="projetos/amplificador-sub350.html">Amplificador SUB350</a></li>
           </ul>
         </li>
-        <li><a href="../index.html#capabilidades">Capabilidades</a></li>
-        <li><a href="../sobre.html">Sobre Nós</a></li>
-        <li><a href="../index.html#contato">Contato</a></li>
+        <li><a href="index.html#capabilidades">Capabilidades</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
       </ul>
     </nav>
   </div>
@@ -39,28 +39,37 @@
 <main>
   <section class="detail-hero">
     <div class="wrap">
-      <p class="breadcrumb"><a href="../index.html#projetos">← Voltar para Projetos</a></p>
+      <p class="breadcrumb"><a href="index.html#top">← Voltar para Home</a></p>
     </div>
   </section>
 
   <section>
-    <div class="wrap detail-grid">
-      <div class="detail-media">
-        <img src="../assets/amplificador-sub100.png" alt="Placa do amplificador SUB100">
+    <div class="wrap">
+      <div class="about-grid company-about reveal-sequence">
+        <div>
+          <span class="eyebrow">Quem somos</span>
+          <h2>Sobre a DCS Electronics</h2>
+          <div class="history-photos">
+            <img src="assets/lab_history.jpeg" alt="Bancada de desenvolvimento da DCS Electronics" class="history-photo">
+            <img src="assets/som_automotivo_history.jpeg" alt="Histórico de projetos de som automotivo da DCS Electronics" class="history-photo">
+          </div>
+        </div>
+        <div>
+          <p>A DCS Electronics nasceu em 2021, a partir da experiência prática de bancada — cada projeto era testado internamente antes de se tornar solução para outras pessoas.</p>
+          <p>Somos focados no desenvolvimento de amplificadores de áudio e sistemas de som automotivo, unindo robustez elétrica e resposta sonora de qualidade em cada projeto que sai da nossa bancada.</p>
+        </div>
       </div>
-      <div class="detail-body">
-        <span class="eyebrow">Áudio Automotivo</span>
-        <h1>Amplificador SUB100</h1>
-        <p>Amplificador classe D de 100W desenvolvido para subwoofers automotivos, com filtro passa-banda dedicado que protege o alto-falante contra sobre-excursão e mantém a resposta nas frequências baixas.</p>
-        <p>Parte da linha SUB da DCS Electronics, foi projetado para caber em instalações compactas sem abrir mão de proteção de circuito e estabilidade térmica.</p>
-        <ul class="detail-specs reveal-rows">
-          <li><span>Categoria</span><span>Áudio Automotivo</span></li>
-          <li><span>Status</span><span>Disponível</span></li>
-          <li><span>Potência</span><span>100W</span></li>
-          <li><span>Classe</span><span>D</span></li>
-          <li><span>CI Amplificador</span><span>TPA3116D2</span></li>
-          <li><span>Filtro</span><span>Filtro passa-baixas dedicado</span></li>
-        </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap about-grid reveal-sequence">
+      <div class="ceo-intro">
+        <img src="assets/CV_Profile_picture.png" alt="Foto de Daniel Carvalho, CEO da DCS Electronics" class="ceo-photo">
+        <h2>Daniel Carvalho — CEO</h2>
+      </div>
+      <div>
+        <p>Engenheiro de RF, mestre em Engenharia Elétrica/Eletrônica com ênfase em eletrônica de RF e projeto de antenas. Tem 6 anos de experiência profissional na área de RFID e no desenvolvimento de soluções de RF para aplicações satelitais (banda Ku, ISM e L-Band), tendo atuado desde o projeto de antenas UHF em microstrip para aplicações RFID até o design completo de PCBAs.</p>
       </div>
     </div>
   </section>
@@ -93,16 +102,16 @@
   });
 
   // scroll reveal (replays every time it enters view)
-  const revealRowsEls = document.querySelectorAll('.reveal-rows');
+  const revealSequenceEls = document.querySelectorAll('.reveal-sequence, .reveal-rows');
   if('IntersectionObserver' in window){
     const ioSequence = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         entry.target.classList.toggle('in', entry.isIntersecting);
       });
     }, { threshold: 0.15 });
-    revealRowsEls.forEach(el => ioSequence.observe(el));
+    revealSequenceEls.forEach(el => ioSequence.observe(el));
   }else{
-    revealRowsEls.forEach(el => el.classList.add('in'));
+    revealSequenceEls.forEach(el => el.classList.add('in'));
   }
 </script>
 

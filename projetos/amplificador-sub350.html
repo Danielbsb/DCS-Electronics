@@ -22,7 +22,7 @@
         <li class="has-dropdown">
           <a href="../index.html#projetos">Projetos</a>
           <ul class="dropdown">
-            <li><a href="som-automotivo-bk8000l.html">Som Automotivo BK8000L</a></li>
+            <li><a href="amplificador-gen30.html">Amplificador GEN30</a></li>
             <li><a href="amplificador-sub100.html">Amplificador SUB100</a></li>
             <li><a href="amplificador-sub75.html">Amplificador SUB75</a></li>
             <li><a href="amplificador-sub350.html">Amplificador SUB350</a></li>
@@ -53,12 +53,13 @@
         <h1>Amplificador SUB350</h1>
         <p>Amplificador classe D de 350W para subwoofers automotivos, com o mesmo filtro passa-banda da linha SUB, para quem precisa de mais potência sem abrir mão da proteção do alto-falante.</p>
         <p>Fecha a linha SUB como a opção de maior potência, mantendo a mesma filosofia de proteção de circuito e resposta consistente nas frequências baixas.</p>
-        <ul class="detail-specs">
+        <ul class="detail-specs reveal-rows">
           <li><span>Categoria</span><span>Áudio Automotivo</span></li>
           <li><span>Status</span><span>Disponível</span></li>
           <li><span>Potência</span><span>350W</span></li>
           <li><span>Classe</span><span>D</span></li>
-          <li><span>Proteção</span><span>Filtro passa-banda dedicado</span></li>
+          <li><span>CI Amplificador</span><span>TPA3551</span></li>
+          <li><span>Filtro</span><span>Filtro passa-baixas dedicado</span></li>
         </ul>
       </div>
     </div>
@@ -90,6 +91,19 @@
     const open = mainNav.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+
+  // scroll reveal (replays every time it enters view)
+  const revealRowsEls = document.querySelectorAll('.reveal-rows');
+  if('IntersectionObserver' in window){
+    const ioSequence = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('in', entry.isIntersecting);
+      });
+    }, { threshold: 0.15 });
+    revealRowsEls.forEach(el => ioSequence.observe(el));
+  }else{
+    revealRowsEls.forEach(el => el.classList.add('in'));
+  }
 </script>
 
 </body>

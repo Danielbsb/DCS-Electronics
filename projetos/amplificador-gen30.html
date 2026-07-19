@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Som Automotivo BK8000L — DCS Electronics</title>
+<title>Amplificador GEN30 — DCS Electronics</title>
 <link rel="icon" type="image/svg+xml" href="../assets/logo_aba.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
         <li class="has-dropdown">
           <a href="../index.html#projetos">Projetos</a>
           <ul class="dropdown">
-            <li><a href="som-automotivo-bk8000l.html">Som Automotivo BK8000L</a></li>
+            <li><a href="amplificador-gen30.html">Amplificador GEN30</a></li>
             <li><a href="amplificador-sub100.html">Amplificador SUB100</a></li>
             <li><a href="amplificador-sub75.html">Amplificador SUB75</a></li>
             <li><a href="amplificador-sub350.html">Amplificador SUB350</a></li>
@@ -46,19 +46,20 @@
   <section>
     <div class="wrap detail-grid">
       <div class="detail-media">
-        <img src="../assets/som-automotivo.jpg" alt="Placa do projeto Som Automotivo BK8000L">
+        <img src="../assets/amp_30w.png" alt="Placa do amplificador GEN30">
       </div>
       <div class="detail-body">
-        <span class="eyebrow">Áudio Automotivo</span>
-        <h1>Som Automotivo BK8000L</h1>
-        <p>Rádio/player MP3 com Bluetooth, inspirado em produtos populares da Pioneer, Sony e Multilaser. Desenvolvido para reproduzir arquivos MP3 e parear com o celular por Bluetooth, mantendo a qualidade de som e a robustez esperadas de um som automotivo de uso diário.</p>
-        <p>O projeto cobriu todo o processo de desenvolvimento — do esquemático ao layout da placa — com foco em robustez elétrica para o ambiente automotivo e nos componentes que formam o núcleo do sistema.</p>
-        <ul class="detail-specs">
-          <li><span>Categoria</span><span>Áudio Automotivo</span></li>
+        <span class="eyebrow">Amplificador de Áudio</span>
+        <h1>Amplificador GEN30</h1>
+        <p>Amplificador classe AB de 30W baseado no CI TDA7297, projetado para uso geral em áudio estéreo com uma resposta limpa e sem a complexidade de estágios de chaveamento.</p>
+        <p>Um projeto compacto e versátil, pensado para quem precisa de um amplificador confiável para aplicações de baixa e média potência.</p>
+        <ul class="detail-specs reveal-rows">
+          <li><span>Categoria</span><span>Amplificador de Áudio</span></li>
           <li><span>Status</span><span>Disponível</span></li>
-          <li><span>Amplificador</span><span>TDA7384 (4 canais)</span></li>
-          <li><span>Bluetooth</span><span>Módulo BK8000L</span></li>
-          <li><span>Controle de áudio</span><span>TDA7313</span></li>
+          <li><span>Potência</span><span>30W (2x15W)</span></li>
+          <li><span>Classe</span><span>AB</span></li>
+          <li><span>CI Amplificador</span><span>TDA7297</span></li>
+          <li><span>Canais</span><span>2 (estéreo)</span></li>
         </ul>
       </div>
     </div>
@@ -90,6 +91,19 @@
     const open = mainNav.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+
+  // scroll reveal (replays every time it enters view)
+  const revealRowsEls = document.querySelectorAll('.reveal-rows');
+  if('IntersectionObserver' in window){
+    const ioSequence = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('in', entry.isIntersecting);
+      });
+    }, { threshold: 0.15 });
+    revealRowsEls.forEach(el => ioSequence.observe(el));
+  }else{
+    revealRowsEls.forEach(el => el.classList.add('in'));
+  }
 </script>
 
 </body>

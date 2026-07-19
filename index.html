@@ -14,7 +14,10 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="#top" class="logo-mark">
-      <img src="assets/logo_fundo_preto.svg" alt="DCS Electronics" class="logo-img">
+      <img alt="DCS Electronics" class="logo-img" id="headerLogo">
+      <script>
+        document.getElementById('headerLogo').src = 'assets/logo_fundo_preto.svg?r=' + Date.now();
+      </script>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
     <nav class="main-nav" id="mainNav">
@@ -22,7 +25,7 @@
         <li class="has-dropdown">
           <a href="#projetos">Projetos</a>
           <ul class="dropdown">
-            <li><a href="projetos/som-automotivo-bk8000l.html">Som Automotivo BK8000L</a></li>
+            <li><a href="projetos/amplificador-gen30.html">Amplificador GEN30</a></li>
             <li><a href="projetos/amplificador-sub100.html">Amplificador SUB100</a></li>
             <li><a href="projetos/amplificador-sub75.html">Amplificador SUB75</a></li>
             <li><a href="projetos/amplificador-sub350.html">Amplificador SUB350</a></li>
@@ -126,7 +129,7 @@
   <!-- PROJETOS -->
   <section id="projetos">
     <div class="wrap">
-      <div class="section-head reveal">
+      <div class="section-head reveal-sequence">
         <span class="eyebrow">Portfólio</span>
         <h2>Projetos</h2>
         <p>Uma amostra do que sai da nossa bancada — de áudio automotivo a alertas embarcados.</p>
@@ -136,29 +139,30 @@
 
         <article class="project-card reveal">
           <div class="project-media">
-            <img src="assets/som-automotivo.jpg" alt="Placa do projeto Som Automotivo BK8000L">
+            <img src="assets/amp_30w.png" alt="Placa do amplificador GEN30">
           </div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="cat">Áudio Automotivo</span>
-              <span class="status disponivel">Disponível</span>
-            </div>
-            <h3><a href="projetos/som-automotivo-bk8000l.html">Som Automotivo BK8000L</a></h3>
-            <p>Rádio/player MP3 com Bluetooth, inspirado em produtos populares da Pioneer, Sony e Multilaser. Componentes principais: TDA7384, módulo Bluetooth BK800L e TDA7313.</p>
+            <h3><a href="projetos/amplificador-gen30.html">Amplificador GEN30</a></h3>
+            <ul class="detail-specs reveal-rows">
+              <li><span>Potência</span><span>30W (2x15W)</span></li>
+              <li><span>Classe</span><span>AB</span></li>
+              <li><span>CI Amplificador</span><span>TDA7297</span></li>
+            </ul>
           </div>
         </article>
 
         <article class="project-card reveal">
           <div class="project-media">
-            <img src="assets/amplificador-sub100.jpg" alt="Placa do amplificador SUB100">
+            <img src="assets/amplificador-sub100.png" alt="Placa do amplificador SUB100">
           </div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="cat">Áudio Automotivo</span>
-              <span class="status disponivel">Disponível</span>
-            </div>
             <h3><a href="projetos/amplificador-sub100.html">Amplificador SUB100</a></h3>
-            <p>Amplificador classe D de 100W para subwoofers automotivos, com filtro passa-banda dedicado que protege o alto-falante contra sobre-excursão e mantém a resposta nas frequências baixas.</p>
+            <ul class="detail-specs reveal-rows">
+              <li><span>Potência</span><span>100W</span></li>
+              <li><span>Classe</span><span>D</span></li>
+              <li><span>CI Amplificador</span><span>TPA3116D2</span></li>
+              <li><span>Filtro</span><span>Filtro passa-baixas dedicado</span></li>
+            </ul>
           </div>
         </article>
 
@@ -167,12 +171,13 @@
             <img src="assets/amplificador-sub75.png" alt="Placa do amplificador SUB75">
           </div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="cat">Áudio Automotivo</span>
-              <span class="status disponivel">Disponível</span>
-            </div>
             <h3><a href="projetos/amplificador-sub75.html">Amplificador SUB75</a></h3>
-            <p>Amplificador classe H de 75W para subwoofers, com o mesmo filtro passa-banda da linha SUB, em um formato ainda mais compacto.</p>
+            <ul class="detail-specs reveal-rows">
+              <li><span>Potência</span><span>75W</span></li>
+              <li><span>Classe</span><span>H</span></li>
+              <li><span>CI Amplificador</span><span>TDA1562</span></li>
+              <li><span>Filtro</span><span>Filtro passa-baixas dedicado</span></li>
+            </ul>
           </div>
         </article>
 
@@ -181,12 +186,13 @@
             <img src="assets/amplificador-sub350.png" alt="Placa do amplificador SUB350">
           </div>
           <div class="project-body">
-            <div class="project-meta">
-              <span class="cat">Áudio Automotivo</span>
-              <span class="status disponivel">Disponível</span>
-            </div>
             <h3><a href="projetos/amplificador-sub350.html">Amplificador SUB350</a></h3>
-            <p>Amplificador classe D de 350W para subwoofers automotivos, com o mesmo filtro passa-banda da linha SUB, para quem precisa de mais potência sem abrir mão da proteção do alto-falante.</p>
+            <ul class="detail-specs reveal-rows">
+              <li><span>Potência</span><span>350W</span></li>
+              <li><span>Classe</span><span>D</span></li>
+              <li><span>CI Amplificador</span><span>TPA3551</span></li>
+              <li><span>Filtro</span><span>Filtro passa-baixas dedicado</span></li>
+            </ul>
           </div>
         </article>
 
@@ -307,8 +313,10 @@
     menuToggle.setAttribute('aria-expanded', 'false');
   }));
 
-  // scroll reveal
+  // scroll reveal (plays once)
   const revealEls = document.querySelectorAll('.reveal');
+  // scroll reveal (replays every time it enters view)
+  const revealSequenceEls = document.querySelectorAll('.reveal-sequence, .reveal-rows');
   if('IntersectionObserver' in window){
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -319,8 +327,16 @@
       });
     }, { threshold: 0.15 });
     revealEls.forEach(el => io.observe(el));
+
+    const ioSequence = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle('in', entry.isIntersecting);
+      });
+    }, { threshold: 0.15 });
+    revealSequenceEls.forEach(el => ioSequence.observe(el));
   }else{
     revealEls.forEach(el => el.classList.add('in'));
+    revealSequenceEls.forEach(el => el.classList.add('in'));
   }
 </script>
 
